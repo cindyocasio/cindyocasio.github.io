@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cindy Ocasio Ríos, Communications & Marketing Consultant</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --verde: #1C3A2B;
+  --dorado: #C4933A;
+  --crema: #F7F2EA;
+  --crema2: #EDE5D4;
+  --text: #3A3530;
+  --light: #888;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--crema);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(247,242,234,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--crema2);
+}
+
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--verde);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-cta {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--verde);
+  text-decoration: none;
+  padding: 9px 20px;
+  border: 1px solid var(--verde);
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: var(--verde); color: var(--crema); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: var(--verde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(196,147,58,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%; left: -10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(196,147,58,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-inner { max-width: 800px; position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.2s;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 300;
+  color: var(--crema);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--dorado);
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: rgba(247,242,234,0.6);
+  line-height: 1.75;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.6s;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: var(--dorado);
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  transition: all 0.3s;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.8s;
+}
+.hero-btn:hover { background: var(--crema); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* DOLOR */
+.dolor {
+  padding: 100px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 50px);
+  font-weight: 400;
+  color: var(--verde);
+  line-height: 1.15;
+  margin-bottom: 48px;
+}
+
+.section-title em { font-style: italic; color: var(--dorado); }
+
+.dolor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dolor-item {
+  background: white;
+  border-left: 3px solid var(--crema2);
+  padding: 24px 28px;
+  transition: border-color 0.3s;
+}
+
+.dolor-item:hover { border-left-color: var(--dorado); }
+
+.dolor-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.dolor-text {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* DIAGNOSTIC TOOL */
+.diagnostic {
+  background: var(--verde);
+  padding: 100px 40px;
+}
+
+.diagnostic-inner { max-width: 720px; margin: 0 auto; }
+
+.diagnostic .section-label { color: var(--dorado); }
+.diagnostic .section-title { color: var(--crema); }
+
+.progress-bar {
+  height: 2px;
+  background: rgba(247,242,234,0.15);
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--dorado);
+  transition: width 0.4s ease;
+  width: 20%;
+}
+
+.question-block { display: none; }
+.question-block.active { display: block; }
+
+.question-num {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(247,242,234,0.4);
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3.5vw, 32px);
+  color: var(--crema);
+  font-weight: 400;
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.options { display: flex; flex-direction: column; gap: 10px; }
+
+.option-btn {
+  background: rgba(247,242,234,0.06);
+  border: 1px solid rgba(247,242,234,0.12);
+  color: rgba(247,242,234,0.8);
+  padding: 16px 22px;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  transition: all 0.25s;
+  width: 100%;
+}
+
+.option-btn:hover {
+  background: rgba(196,147,58,0.15);
+  border-color: var(--dorado);
+  color: var(--crema);
+}
+
+.option-btn.selected {
+  background: var(--dorado);
+  border-color: var(--dorado);
+  color: var(--verde);
+  font-weight: 500;
+}
+
+.nav-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  align-items: center;
+}
+
+.btn-next {
+  background: var(--dorado);
+  color: var(--verde);
+  border: none;
+  padding: 13px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: none;
+}
+
+.btn-next:hover { background: var(--crema); }
+.btn-next.visible { display: block; }
+
+.btn-back {
+  background: transparent;
+  color: rgba(247,242,234,0.4);
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  display: none;
+}
+.btn-back.visible { display: block; }
+
+/* RESULTADO */
+.result-block {
+  display: none;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.result-block.active { display: block; }
+
+.result-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.result-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  color: var(--crema);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.result-text {
+  font-size: 15px;
+  color: rgba(247,242,234,0.65);
+  line-height: 1.75;
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.result-cta {
+  display: inline-block;
+  background: var(--dorado);
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  transition: all 0.3s;
+}
+.result-cta:hover { background: var(--crema); }
+
+.result-reset {
+  display: block;
+  margin-top: 14px;
+  font-size: 11px;
+  color: rgba(247,242,234,0.3);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: underline;
+}
+
+/* SERVICIOS */
+.servicios {
+  padding: 100px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.servicio-card {
+  background: white;
+  padding: 32px 28px;
+  border-top: 3px solid var(--crema2);
+  transition: border-color 0.3s;
+}
+
+.servicio-card:hover { border-top-color: var(--dorado); }
+
+.servicio-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  color: var(--crema2);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.servicio-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--verde);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.servicio-desc {
+  font-size: 13.5px;
+  color: var(--light);
+  line-height: 1.65;
+}
+
+/* SOBRE MI */
+.sobre {
+  background: var(--verde);
+  padding: 100px 40px;
+}
+
+.sobre-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.sobre .section-label { color: var(--dorado); }
+
+.sobre-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--crema);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.sobre-title em { font-style: italic; color: var(--dorado); }
+
+.sobre-text {
+  font-size: 14.5px;
+  color: rgba(247,242,234,0.65);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.credenciales { margin-top: 32px; }
+
+.cred-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(247,242,234,0.08);
+}
+
+.cred-item:last-child { border-bottom: none; }
+
+.cred-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--dorado);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.cred-text {
+  font-size: 13px;
+  color: rgba(247,242,234,0.55);
+  line-height: 1.6;
+}
+
+.sobre-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stat-box {
+  background: rgba(247,242,234,0.04);
+  border: 1px solid rgba(247,242,234,0.08);
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  color: var(--dorado);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: rgba(247,242,234,0.4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* CONTACTO */
+.contacto {
+  padding: 100px 40px;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contacto .section-title { margin-bottom: 16px; }
+
+.contacto-sub {
+  font-size: 15px;
+  color: var(--light);
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+.contacto-btn {
+  display: inline-block;
+  background: var(--verde);
+  color: var(--crema);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  transition: all 0.3s;
+}
+
+.contacto-btn:hover { background: var(--dorado); color: var(--verde); }
+
+/* FOOTER */
+footer {
+  background: var(--verde);
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(247,242,234,0.08);
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: rgba(247,242,234,0.5);
+  letter-spacing: 2px;
+}
+
+.footer-email {
+  font-size: 12px;
+  color: var(--dorado);
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 16px 20px; }
+  .nav-name { font-size: 13px; letter-spacing: 1px; }
+  .dolor-grid { grid-template-columns: 1fr; }
+  .servicios-grid { grid-template-columns: 1fr; }
+  .sobre-inner { grid-template-columns: 1fr; gap: 40px; }
+  .sobre-stats { grid-template-columns: 1fr 1fr; }
+  .dolor, .servicios, .contacto { padding: 60px 24px; }
+  .diagnostic { padding: 60px 24px; }
+  .sobre { padding: 60px 24px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-name">Cindy Ocasio Ríos</div>
+  <a href="#diagnostico" class="nav-cta">Comencemos</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Comunicación Corporativa · Marketing · Estrategia de Negocio</div>
+    <h1 class="hero-title">
+      Tu negocio tiene algo<br>que decir. <em>Asegurémonos que<br>lo escuche el cliente correcto.</em>
+    </h1>
+    <p class="hero-sub">
+      Consultoría estratégica para marcas personales, pequeñas empresas y profesionales independientes que quieren comunicar con claridad y crecer con propósito.
+    </p>
+    <a href="#diagnostico" class="hero-btn">Descubre por dónde empezar</a>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section class="dolor">
+  <div class="section-label">¿Te identificas?</div>
+  <h2 class="section-title">Tienes el negocio.<br><em>Falta la estrategia que lo mueve.</em></h2>
+  <div class="dolor-grid">
+    <div class="dolor-item">
+      <div class="dolor-icon">🌀</div>
+      <p class="dolor-text">Sabes lo que haces bien, pero cuando intentas explicarlo no suena como tú. Tu mensaje se pierde antes de llegar al cliente correcto.</p>
+    </div>
+    <div class="dolor-item">
+      <div class="dolor-icon">📱</div>
+      <p class="dolor-text">Tienes presencia en redes pero no estás llegando a quien quieres. Publicas, pero no conecta. Y no sabes exactamente por qué.</p>
+    </div>
+    <div class="dolor-item">
+      <div class="dolor-icon">🎯</div>
+      <p class="dolor-text">No tienes claro quién es tu cliente ideal. Sabes que puedes ayudar a muchos, pero no sabes a quién hablarle primero ni cómo.</p>
+    </div>
+    <div class="dolor-item">
+      <div class="dolor-icon">🏗️</div>
+      <p class="dolor-text">Tu negocio tiene potencial pero le falta estructura. Operás por intuición y eso te funciona hasta cierto punto, pero quieres un plan real.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNÓSTICO -->
+<section class="diagnostic" id="diagnostico">
+  <div class="diagnostic-inner">
+    <div class="section-label">Herramienta de diagnóstico</div>
+    <h2 class="section-title" style="margin-bottom:32px;">¿Por dónde <em>empezamos?</em></h2>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <!-- Q1 -->
+    <div class="question-block active" id="q1">
+      <div class="question-num">Pregunta 1 de 5</div>
+      <div class="question-text">¿En qué momento estás con tu negocio?</div>
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(this, 'q1')">Tengo la idea pero no he arrancado</button>
+        <button class="option-btn" onclick="selectOption(this, 'q1')">Estoy lanzando o recién lancé</button>
+        <button class="option-btn" onclick="selectOption(this, 'q1')">Ya tengo clientes pero no tengo estrategia clara</button>
+        <button class="option-btn" onclick="selectOption(this, 'q1')">Estoy creciendo y quiero llegar a más personas</button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back" id="back1"></button>
+        <button class="btn-next" id="next1" onclick="nextQ(2, 20)">Siguiente →</button>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-block" id="q2">
+      <div class="question-num">Pregunta 2 de 5</div>
+      <div class="question-text">¿Cuál es tu mayor reto ahora mismo?</div>
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(this, 'q2')">No sé cómo comunicar lo que hago ni a quién</button>
+        <button class="option-btn" onclick="selectOption(this, 'q2')">No tengo presencia digital o no me está funcionando</button>
+        <button class="option-btn" onclick="selectOption(this, 'q2')">Tengo el producto o servicio pero no llego al cliente correcto</button>
+        <button class="option-btn" onclick="selectOption(this, 'q2')">Mi marca no refleja lo que realmente soy</button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back visible" onclick="prevQ(1, 20)">← Atrás</button>
+        <button class="btn-next" id="next2" onclick="nextQ(3, 40)">Siguiente →</button>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-block" id="q3">
+      <div class="question-num">Pregunta 3 de 5</div>
+      <div class="question-text">¿Con qué tipo de negocio o proyecto te identificas?</div>
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(this, 'q3')">Soy profesional independiente o marca personal</button>
+        <button class="option-btn" onclick="selectOption(this, 'q3')">Tengo una pequeña empresa o negocio de producto</button>
+        <button class="option-btn" onclick="selectOption(this, 'q3')">Soy creadora de contenido o influencer</button>
+        <button class="option-btn" onclick="selectOption(this, 'q3')">Dirijo una organización o proyecto social</button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back visible" onclick="prevQ(2, 40)">← Atrás</button>
+        <button class="btn-next" id="next3" onclick="nextQ(4, 60)">Siguiente →</button>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question-block" id="q4">
+      <div class="question-num">Pregunta 4 de 5</div>
+      <div class="question-text">¿Qué área necesita más atención ahora?</div>
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(this, 'q4')">Estrategia, saber hacia dónde ir y cómo</button>
+        <button class="option-btn" onclick="selectOption(this, 'q4')">Comunicación, saber qué decir y cómo decirlo</button>
+        <button class="option-btn" onclick="selectOption(this, 'q4')">Marketing digital, presencia, contenido y audiencia</button>
+        <button class="option-btn" onclick="selectOption(this, 'q4')">Estructura de negocio, modelo, precio, cliente ideal</button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back visible" onclick="prevQ(3, 60)">← Atrás</button>
+        <button class="btn-next" id="next4" onclick="nextQ(5, 80)">Siguiente →</button>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-block" id="q5">
+      <div class="question-num">Pregunta 5 de 5</div>
+      <div class="question-text">¿Cuándo quieres empezar a moverte?</div>
+      <div class="options">
+        <button class="option-btn" onclick="selectOption(this, 'q5')">Ahora mismo</button>
+        <button class="option-btn" onclick="selectOption(this, 'q5')">Este mes</button>
+        <button class="option-btn" onclick="selectOption(this, 'q5')">En los próximos 3 meses</button>
+        <button class="option-btn" onclick="selectOption(this, 'q5')">Quiero entender mis opciones antes de decidir</button>
+      </div>
+      <div class="nav-btns">
+        <button class="btn-back visible" onclick="prevQ(4, 80)">← Atrás</button>
+        <button class="btn-next" id="next5" onclick="showResult()">Ver mi diagnóstico →</button>
+      </div>
+    </div>
+
+    <!-- LEAD FORM (hidden) -->
+    <div class="question-block" id="lead-form-block" style="display:none!important;">
+      <div class="lead-form">
+        <h3>Ya casi está tu diagnóstico.</h3>
+        <p>Déjame tu nombre y email para enviarte el resultado y poder hacer seguimiento personalizado.</p>
+        <div class="form-row">
+          <input type="text" id="lead-name" class="form-input" placeholder="Tu nombre completo">
+          <input type="email" id="lead-email" class="form-input" placeholder="Tu email">
+          <button class="form-submit" onclick="showResult()">Ver mi diagnóstico →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTADO DINÁMICO -->
+    <div class="result-block" id="result">
+      <div class="result-icon">✦</div>
+      <div class="result-title">Aquí está tu <em>diagnóstico preliminar.</em></div>
+      <p class="result-text">Basado en lo que me contaste, identifiqué estas brechas y oportunidades en tu negocio:</p>
+      
+      <div class="fugas" id="fugas-list"></div>
+
+      <p class="result-text" style="margin-top:8px;">El siguiente paso es una <strong style="color:var(--dorado)">Sesión de Discovery</strong>, dos horas donde analizamos tu situación específica y construimos el plan correcto para ti.</p>
+      
+      <a href="#" id="discovery-link" class="result-cta">Agenda tu Discovery Session</a>
+      
+      <div class="otros-servicios">
+        <button class="otros-toggle" onclick="toggleOtros()">▼ Ver todos mis servicios</button>
+        <div class="otros-list" id="otros-list">
+          <div class="otro-item"><span class="otro-name">Consultoría Estratégica Mensual</span>Acompañamiento continuo con sesiones de trabajo, orientación entre sesiones y reporte mensual de recomendaciones.</div>
+          <div class="otro-item"><span class="otro-name">Identidad de Marca Profesional</span>Logo, paleta de colores, tipografía, tono de voz y guía de marca lista para aplicar en todos tus canales.</div>
+          <div class="otro-item"><span class="otro-name">Buyer Persona + Recorrido del Consumidor</span>Investigación y definición de tu cliente ideal con el mapa completo de cómo toma decisiones de compra.</div>
+          <div class="otro-item"><span class="otro-name">Estrategia de Contenido y Redes Sociales</span>Pilares de contenido, calendario editorial y recomendaciones de formato y plataforma alineados a tu negocio.</div>
+          <div class="otro-item"><span class="otro-name">Paquete de Producción de Contenido</span>Creación de artes, carruseles y reels con equipo audiovisual profesional y copywriting incluido.</div>
+          <div class="otro-item"><span class="otro-name">Automatizaciones Estratégicas de Instagram</span>Definición de qué automatizar y por qué, configuración de flujos y sesión de entrega.</div>
+          <div class="otro-item"><span class="otro-name">Estrategia de Campañas Digitales</span>Setup y lanzamiento de campañas en Meta Ads o Google Ads para amplificar tu alcance con intención.</div>
+          <div class="otro-item"><span class="otro-name">Sesión de Discovery</span>Diagnóstico profundo de tu negocio en 2 horas con informe ejecutivo entregable en 48 horas.</div>
+        </div>
+      </div>
+
+      <button class="result-reset" onclick="resetTool()">Volver a empezar</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios">
+  <div class="section-label">Lo que construimos juntos</div>
+  <h2 class="section-title">Estrategia que <em>mueve negocios.</em></h2>
+  <div class="servicios-grid">
+    <div class="servicio-card">
+      <div class="servicio-num">01</div>
+      <div class="servicio-name">Comunicación Corporativa</div>
+      <p class="servicio-desc">Definimos cómo habla tu marca, a quién le habla y qué necesita decir para conectar con las personas correctas en cada canal.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">02</div>
+      <div class="servicio-name">Marketing y Presencia Digital</div>
+      <p class="servicio-desc">Estrategia de contenido, pilares editoriales, redes sociales, identificación de tu buyer persona y recorrido del consumidor. Todo alineado a tus objetivos de negocio reales.</p>
+    </div>
+    <div class="servicio-card">
+      <div class="servicio-num">03</div>
+      <div class="servicio-name">Estrategia de Negocio</div>
+      <p class="servicio-desc">Modelo de negocio, estructura de precios, políticas comerciales y recorrido del cliente. Las bases que hacen que todo lo demás funcione.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="sobre">
+  <div class="sobre-inner">
+    <div>
+      <div class="section-label">Sobre mí</div>
+      <h2 class="sobre-title">Mi formación me enseñó a analizar.<br><em>Mi experiencia me enseñó a resolver.</em></h2>
+      <p class="sobre-text">Soy Cindy, consultora de comunicaciones, marketing y estrategia de negocio con formación en Puerto Rico y Europa, experiencia en mercados del Caribe y España, y más de 8 años trabajando con marcas, organizaciones y profesionales independientes.</p>
+      <p class="sobre-text">El enfoque combina psicología del consumidor, estrategia de marca y comunicaciones corporativas para ayudarte a construir algo que dure.</p>
+      <div class="credenciales">
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div class="cred-text">Master en Comunicación Política y Corporativa · Universidad de Navarra, España</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div class="cred-text">Psicología · UAGM (Summa Cum Laude) · Formación en Modelo de Negocio y Emprendimiento</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div class="cred-text">Certificada: Inbound Marketing, SEO, Investigación de Mercados y Comportamiento del Consumidor</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div class="cred-text">Ganadora Innovation Fast Track 2019 · Programa de formación práctica en innovación y creación de empresas · Innovation Factory, Universidad de Navarra, España</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-dot"></div>
+          <div class="cred-text">Experiencia en PR, República Dominicana, Colombia, Jamaica, el Caribe y España</div>
+        </div>
+      </div>
+    </div>
+    <div class="sobre-stats">
+      <div class="stat-box">
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Años de experiencia</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Áreas de expertise</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Países y mercados</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">1:1</div>
+        <div class="stat-label">Servicio personalizado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contacto">
+  <div class="section-label">El siguiente paso</div>
+  <h2 class="section-title">¿Listo para <em>empezar?</em></h2>
+  <p class="contacto-sub">El servicio es 1:1 y personalizado, cada negocio recibe atención directa y estrategia pensada para su realidad específica. Si estás listo para empezar, escríbeme.</p>
+  <a href="mailto:tuestrategiaconcindy@gmail.com?subject=Impulsar mi negocio" class="contacto-btn">Impulsar mi negocio</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Cindy Ocasio Ríos</div>
+  <a href="mailto:tuestrategiaconcindy@gmail.com" class="footer-email">tuestrategiaconcindy@gmail.com</a>
+</footer>
+
+<style>
+.lead-form { margin-top: 0; }
+.lead-form h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: var(--crema);
+  margin-bottom: 8px;
+}
+.lead-form p {
+  font-size: 13.5px;
+  color: rgba(247,242,234,0.5);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+.form-row { display: flex; flex-direction: column; gap: 12px; }
+.form-input {
+  background: rgba(247,242,234,0.06);
+  border: 1px solid rgba(247,242,234,0.12);
+  color: var(--crema);
+  padding: 14px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.form-input::placeholder { color: rgba(247,242,234,0.3); }
+.form-input:focus { border-color: var(--dorado); }
+.form-submit {
+  background: var(--dorado);
+  color: var(--verde);
+  border: none;
+  padding: 14px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+.form-submit:hover { background: var(--crema); }
+
+.fugas { margin: 20px 0 28px; }
+.fuga-item {
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(247,242,234,0.08);
+  text-align: left;
+}
+.fuga-item:last-child { border-bottom: none; }
+.fuga-dot {
+  width: 6px; height: 6px;
+  background: var(--dorado);
+  border-radius: 50%;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.fuga-text { font-size: 13.5px; color: rgba(247,242,234,0.7); line-height: 1.6; }
+.fuga-label { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--dorado); display: block; margin-bottom: 2px; }
+
+.otros-servicios { margin-top: 24px; }
+.otros-toggle {
+  background: transparent;
+  border: 1px solid rgba(247,242,234,0.15);
+  color: rgba(247,242,234,0.5);
+  padding: 10px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+.otros-toggle:hover { border-color: var(--dorado); color: var(--dorado); }
+.otros-list {
+  display: none;
+  margin-top: 16px;
+  text-align: left;
+}
+.otros-list.open { display: block; }
+.otro-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(247,242,234,0.06);
+  font-size: 13px;
+  color: rgba(247,242,234,0.55);
+  line-height: 1.5;
+}
+.otro-item:last-child { border-bottom: none; }
+.otro-name { font-weight: 500; color: rgba(247,242,234,0.8); display: block; }
+</style>
+
+<script>
+const answers = { q1: '', q2: '', q3: '', q4: '', q5: '' };
+
+const fugas = {
+  'No sé cómo comunicar lo que hago ni a quién': [
+    { label: 'Mensaje sin definir', text: 'Tu propuesta de valor no está clara ni consistente. Las personas no entienden exactamente qué haces y por qué eres la opción correcta para ellas.' },
+    { label: 'Audiencia sin segmentar', text: 'Sin un buyer persona definido, tu comunicación intenta llegar a todos y no conecta con nadie en particular.' }
+  ],
+  'No tengo presencia digital o no me está funcionando': [
+    { label: 'Presencia digital inconsistente', text: 'Tu marca no tiene una presencia digital estructurada o lo que tienes no está generando resultados medibles.' },
+    { label: 'Sin estrategia de contenido', text: 'Publicar sin estrategia consume tiempo y no construye audiencia. Falta un sistema editorial alineado a tus objetivos.' }
+  ],
+  'Tengo el producto pero no llego al cliente correcto': [
+    { label: 'Buyer persona sin definir', text: 'No tienes claridad sobre quién es tu cliente ideal, qué busca y cómo toma decisiones de compra.' },
+    { label: 'Canales y mensajes desalineados', text: 'Estás comunicando en los canales equivocados o con un mensaje que no resuena con quien puede pagarte.' }
+  ],
+  'Mi marca no refleja lo que realmente soy': [
+    { label: 'Identidad de marca desalineada', text: 'Tu imagen, tono de voz y mensajes no comunican correctamente quién eres ni el valor que entregas.' },
+    { label: 'Falta de diferenciación', text: 'Sin un posicionamiento claro, tu marca se mezcla con la competencia y no tienes un lugar propio en la mente de tu cliente.' }
+  ]
+};
+
+const oportunidades = {
+  'Estrategia': { label: 'Oportunidad estratégica', text: 'Un plan estratégico claro te daría dirección, prioridades y métricas para medir tu crecimiento.' },
+  'Comunicación': { label: 'Oportunidad en comunicación', text: 'Definir tu messaging framework y tono de voz haría que cada pieza de contenido trabaje para ti de forma consistente.' },
+  'Marketing digital': { label: 'Oportunidad en marketing digital', text: 'Una estrategia de contenido con pilares editoriales y calendario te permitiría crecer audiencia con intención y sin improvisar.' },
+  'Estructura de negocio': { label: 'Oportunidad estructural', text: 'Revisar tu modelo de negocio, estructura de precios y políticas comerciales puede aumentar tu rentabilidad sin necesariamente conseguir más clientes.' }
+};
+
+function selectOption(btn, qId) {
+  document.querySelectorAll('#' + qId + ' .option-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  answers[qId] = btn.textContent.trim();
+  document.getElementById('next' + qId.replace('q','')).classList.add('visible');
+}
+
+function nextQ(num, progress) {
+  document.querySelectorAll('.question-block').forEach(b => b.classList.remove('active'));
+  document.getElementById('q' + num).classList.add('active');
+  document.getElementById('progress').style.width = progress + '%';
+}
+
+function prevQ(num, progress) {
+  document.querySelectorAll('.question-block').forEach(b => b.classList.remove('active'));
+  document.getElementById('q' + num).classList.add('active');
+  document.getElementById('progress').style.width = progress + '%';
+}
+
+function showLeadForm() {
+  document.querySelectorAll('.question-block').forEach(b => b.classList.remove('active'));
+  
+  document.getElementById('progress').style.width = '90%';
+}
+
+function showResult() {
+  const nombre = '';
+  const email = '';
+
+  // Build result
+  const q2 = answers.q2;
+  const q4 = answers.q4;
+  const fugasList = fugas[q2] || [];
+  const oport = oportunidades[q4] || null;
+
+  let fugasHTML = '';
+  fugasList.forEach(f => {
+    fugasHTML += `<div class="fuga-item"><div class="fuga-dot"></div><div class="fuga-text"><span class="fuga-label">${f.label}</span>${f.text}</div></div>`;
+  });
+  if (oport) {
+    fugasHTML += `<div class="fuga-item"><div class="fuga-dot"></div><div class="fuga-text"><span class="fuga-label">${oport.label}</span>${oport.text}</div></div>`;
+  }
+
+  
+  document.getElementById('fugas-list').innerHTML = fugasHTML;
+
+  const mailBody = `Nombre: ${nombre}%0AEmail: ${email}%0A%0AEtapa del negocio: ${answers.q1}%0AMayor reto: ${answers.q2}%0ATipo de negocio: ${answers.q3}%0AÁrea prioritaria: ${answers.q4}%0AUrgencia: ${answers.q5}`;
+  const etapaParam = encodeURIComponent(answers.q1);
+  const retoParam = encodeURIComponent(answers.q2);
+  const tipoParam = encodeURIComponent(answers.q3);
+  const areaParam = encodeURIComponent(answers.q4);
+  const urgenciaParam = encodeURIComponent(answers.q5);
+  document.getElementById('discovery-link').href = `https://tally.so/r/5BMWYQ?etapa=${etapaParam}&reto=${retoParam}&tipo=${tipoParam}&area=${areaParam}&urgencia=${urgenciaParam}`;
+
+  
+  document.querySelectorAll('.question-block').forEach(b => b.classList.remove('active'));
+  document.getElementById('result').classList.add('active');
+  document.getElementById('progress').style.width = '100%';
+}
+
+function toggleOtros() {
+  const list = document.getElementById('otros-list');
+  list.classList.toggle('open');
+  const btn = document.querySelector('.otros-toggle');
+  btn.textContent = list.classList.contains('open') ? '▲ Ocultar servicios' : '▼ Ver todos mis servicios';
+}
+
+function resetTool() {
+  document.querySelectorAll('.question-block').forEach(b => b.classList.remove('active'));
+  
+  document.getElementById('result').classList.remove('active');
+  document.getElementById('q1').classList.add('active');
+  document.getElementById('progress').style.width = '20%';
+  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  document.querySelectorAll('.btn-next').forEach(b => b.classList.remove('visible'));
+  
+  Object.keys(answers).forEach(k => answers[k] = '');
+}
+</script>
+
+</body>
+</html>
